@@ -1,0 +1,2 @@
+ligar um LED usando um microcontrolador como ESP32 ou ESP8266.
+considera que o LED está conectado a um pino digital (por exemplo, GPIO2) com um resistor em série.
