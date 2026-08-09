@@ -1,0 +1,16 @@
+from machine import Pin
+import time
+
+# Configura o pino 2 como saída (substitua pelo pino que você está usando)
+led = Pin(2, Pin.OUT)
+
+try:
+    while True:
+        led.value(1)  # Liga o LED
+        time.sleep(1) # Aguarda 1 segundo
+        led.value(0)  # Desliga o LED
+        time.sleep(1) # Aguarda 1 segundo
+except KeyboardInterrupt:
+    # Garante que o LED desligue ao interromper o programa
+    led.value(0)
+    print("Programa encerrado.")
