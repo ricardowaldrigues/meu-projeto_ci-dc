@@ -1,0 +1,43 @@
+
+# Python & MicroPython
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Ambientes Virtuais Python
+.venv/
+venv/
+ENV/
+env/
+
+# Ferramentas & IDEs de MicroPython
+
+# Configurações do VS Code (incluindo extensões como Pymakr)
+.vscode/
+.pymakr/
+pymakr.conf
+
+# Configurações da IDE Thonny
+.thonny/
+
+# Arquivos de log e sessão de comunicação serial (ampy, esptool, mpremote)
+*.log
+.esptool/
+
+# Firmware & Compilação (ESP32)
+
+# Caso você baixe arquivos .bin de firmware do MicroPython para a pasta do projeto
+*.bin
+*.elf
+*.map
+
+# Arquivos de backup gerados por editores
+*.bak
+*.swp
+*~
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
