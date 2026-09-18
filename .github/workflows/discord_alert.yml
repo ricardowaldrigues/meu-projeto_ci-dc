@@ -1,0 +1,27 @@
+name: Notificacao Discord CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Enviar Alerta para o Discord
+        uses: ilakov/discord-webhook-action@v1.0.0
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          title: " Novo Commit/Merge na Branch Main!"
+          description: |
+            **Repositório:** ${{ github.repository }}
+            **Autor:** ${{ github.actor }}
+            **Branch:** ${{ github.ref_name }}
+            **Mensagem:** ${{ github.event.head_commit.message }}
+          color: "0x00FF00"
