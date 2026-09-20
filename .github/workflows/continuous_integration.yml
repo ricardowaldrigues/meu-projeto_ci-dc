@@ -1,15 +1,10 @@
- 
-
-
-          name: CI/CD Pipeline
-
-          
+name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -23,7 +18,8 @@ jobs:
       - name: Executar testes / Build
         run: |
           echo "Executando testes e validação do código..."
-          # Adicione aqui os comandos de build/teste da sua aplicação (ex: npm test, python -m unittest, etc.)
+          # Adicione aqui os comandos de build/teste da sua aplicação
+          # ex: npm test, python -m unittest, etc.
 
   deploy:
     name: Continuous Delivery (CD)
@@ -38,6 +34,7 @@ jobs:
       - name: Executar Deploy
         run: |
           echo "Realizando o deploy da aplicação..."
-          # Adicione aqui os comandos de deploy (ex: AWS, Vercel, Firebase, Docker, etc.)
-          echo test, and deploy your project.
-          
+          # Adicione aqui os comandos de deploy
+          # ex: AWS, Vercel, Firebase, Docker, etc.
+          echo "test, and deploy your project."
+
